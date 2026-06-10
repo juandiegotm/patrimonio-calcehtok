@@ -13,7 +13,7 @@
         <p>Estudio Multidisciplinario sobre la Tradición de los Dulces de Yucatán</p>
     </header>
 
-    <!-- 🗺️ MENÚ DE ATAJOS CON NUMERACIÓN DE PUNTOS Y BARRAS MAYAS -->
+    <!-- MENÚ DE ATAJOS CON NUMERACIÓN DE PUNTOS Y BARRAS MAYAS -->
     <main class="shortcuts-menu">
         
         <!-- ATAJO 1 -->
@@ -61,18 +61,35 @@
             <div class="shortcut-btn">Explorar Módulo</div>
         </a>
 
+        <!-- ATAJO 6: NUEVO APARTADO DE RECETAS -->
+        <a href="recetas.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num"> — • </div>
+                <div class="shortcut-title">Recetario Tradicional Local</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
     </main>
 
-    <!-- 🤠 ASISTENTE VIRTUAL: EL MESTIZO YUCATECO -->
+    <!-- REFLEXIÓN COMUNITARIA DE PAZ -->
+    <div style="max-width: 850px; margin: 0 auto 5rem auto; padding: 0 1.5rem; text-align: center;">
+        <div style="font-family: monospace; font-size: 1.2rem; color: #bd8e32; letter-spacing: 4px; margin-bottom: 1rem;">┚■┖ [ ❖ ] ┚■┖</div>
+        <p style="font-family: 'Lora', Georgia, serif; font-size: 1.15rem; font-style: italic; color: #50271c; line-height: 1.7; max-width: 750px; margin: 0 auto;">
+            "Los dulces tradicionales de nuestra comunidad representan más que un alimento; son parte de nuestra historia, identidad y cultura. Al apoyar a los artesanos y productores locales, fortalecemos la economía de las familias, preservamos nuestras tradiciones y promovemos un ambiente de paz, unión y respeto. Valorar estas costumbres nos permite trabajar juntos por el bienestar de la comunidad y transmitir nuestro legado cultural a las futuras generaciones."
+        </p>
+    </div>
+
+    <!-- ASISTENTE VIRTUAL: EL MESTIZO YUCATECO -->
     <div class="asistente-yucateco-container">
         <div class="bocadillo-yucateco" id="bocadillo-yucateco">
-            <h4>¡Malas tardes, puruxón! 👋🤠</h4>
-            <p>¡Bomborota de proyecto te aventaste! Soy tu compadre de Calcehtok. Aquí abajo organicé todos tus puntos bien chulos con el sistema de numeración de nuestros ancestros mayas.</p>
-            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6e4720;"><em>¡Haz clic en un módulo para empezar a boxear el conocimiento!</em></p>
+            <h4>Buenas tardes</h4>
+            <p>Bienvenidos al portal de Calcehtok. Aquí abajo organicé todos tus puntos bien estructurados con el sistema de numeración de nuestros ancestros mayas.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6e4720;"><em>Haz clic en un módulo para empezar a explorar el conocimiento.</em></p>
         </div>
         <div class="avatar-yucateco" onclick="toggleYucateco()">
             <div class="sombrero-jipi"></div>
-            <div class="guayabera-face">👨🏻‍🌾</div>
+            <div class="guayabera-face"></div>
         </div>
     </div>
 
@@ -85,7 +102,6 @@
             var b = document.getElementById('bocadillo-yucateco');
             b.style.display = b.style.display === "block" ? "none" : "block";
         }
-        // Se abre automáticamente a los 2 segundos para llamar la atención
         setTimeout(() => {
             document.getElementById('bocadillo-yucateco').style.display = 'block';
         }, 1500);
