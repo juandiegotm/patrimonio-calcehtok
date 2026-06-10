@@ -1,0 +1,348 @@
+/* CLON DEL ESTILO PREMUM + TOQUE MAYA YUCATECO */
+:root {
+    --header-gradient: linear-gradient(to bottom, #391a13, #50271c); 
+    --gold-text: #f3be4e;         
+    --gold-muted: #d9ab55;        
+    --bg-cream: #e6e5cb;          
+    --card-bg: #f5f4dc;           
+    --border-green: #2b4c33;      /* Verde selva maya más vivo */
+    --text-dark: #222222;         
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Lora:ital,wght@0,500;0,700;1,400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER CON GRECA GEOMÉTRICA MAYA */
+header {
+    background: var(--header-gradient);
+    text-align: center;
+    padding: 5rem 1.5rem 6.5rem 1.5rem;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Cintillo flotante estilo herencia */
+header::before {
+    content: "₪ ➔ KO'OX XOK (VAMOS A LEER) ➔ ₪";
+    display: inline-block;
+    background-color: var(--border-green);
+    color: var(--gold-text);
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    border: 2px solid var(--gold-muted);
+}
+
+header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.6rem;
+    color: var(--gold-text);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-shadow: 2px 3px 0px rgba(0,0,0,0.4);
+}
+
+/* 🧱 GARABATO / GRECA MAYA DE TRADICIÓN (Estilo ruinas Puuc) */
+header::after {
+    content: "┚┚┚ [ ❖ ] ┖┖┖";
+    display: block;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: var(--gold-muted);
+    letter-spacing: 6px;
+    margin-top: 1.5rem;
+}
+
+header p {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ffffff;
+    max-width: 750px;
+    margin: 1.5rem auto 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* 🗺️ TABLERO DE ATAJOS EN COLUMNAS */
+.shortcuts-menu {
+    max-width: 1150px;
+    width: 92%;
+    margin: -3.5rem auto 4rem auto; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1.5rem;
+    z-index: 10;
+}
+
+/* TARJETAS RÚSTICAS DE ALTO IMPACTO */
+.shortcut-item {
+    background: var(--card-bg);
+    border: 2px solid var(--border-green);
+    border-radius: 12px;
+    padding: 2.2rem 1.2rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    position: relative;
+}
+
+.shortcut-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(57, 26, 19, 0.2);
+    background: #fffdf0;
+}
+
+/* Detalle de garabato en las esquinas superiores de la tarjeta al hacer hover */
+.shortcut-item:hover::before {
+    content: "𒁂";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 0.8rem;
+    color: var(--gold-muted);
+}
+
+.shortcut-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* El número maya resaltado en grande */
+.shortcut-num {
+    font-family: sans-serif;
+    color: var(--border-green);
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.shortcut-item:hover .shortcut-num {
+    color: #bd8e32;
+    transform: scale(1.1);
+}
+
+.shortcut-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 900;
+    color: var(--text-dark);
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* El botón llamativo institucional */
+.shortcut-btn {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--border-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--gold-muted);
+    padding-bottom: 3px;
+    transition: var(--transition);
+}
+
+.shortcut-item:hover .shortcut-btn {
+    color: #bd8e32;
+    border-color: var(--border-green);
+}
+
+/* 📄 CONTENEDOR DE PÁGINAS INTERNAS CON DETALLES PUUC */
+.content-container {
+    max-width: 900px;
+    width: 92%;
+    margin: 3rem auto 5rem auto;
+    background-color: var(--card-bg);
+    padding: 3.5rem;
+    border: 2px solid var(--border-green);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.btn-regresar {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    background: var(--border-green);
+    color: var(--bg-cream);
+    padding: 0.6rem 1.4rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-bottom: 2.5rem;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+.btn-regresar:hover {
+    background: #391a13;
+    color: var(--gold-text);
+}
+
+.content-container h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #391a13;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Greca decorativa intermedia para separar textos */
+.content-container h2::after {
+    content: "┚■┖■┚ [ ❖ ] ┖■┚■┖";
+    display: block;
+    font-family: monospace;
+    font-size: 1rem;
+    color: var(--gold-muted);
+    margin-top: 0.5rem;
+}
+
+.content-container h3 {
+    font-family: 'Cinzel', serif;
+    margin: 2rem 0 0.8rem 0;
+    font-size: 1.3rem;
+    color: var(--border-green);
+    border-bottom: 2px dashed rgba(68, 93, 74, 0.3);
+    padding-bottom: 0.4rem;
+}
+
+.content-container p {
+    font-size: 1.1rem;
+    color: #2b1a08;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* TABLAS Y OTROS ELEMENTOS INTERNOS */
+table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #fffdf0; }
+th, td { padding: 1rem; border: 2px solid var(--border-green); font-size: 1rem; }
+th { background-color: var(--border-green); color: white; font-family: 'Cinzel', serif; }
+tr:nth-child(even) { background-color: rgba(43, 76, 51, 0.05); }
+
+.sub-card { background: rgba(43, 76, 51, 0.04); border-left: 5px solid var(--border-green); padding: 1.2rem; }
+.list-bullet li { margin-left: 1.5rem; margin-bottom: 0.5rem; }
+
+/* 🤠 CONSTRUCCIÓN DEL ASISTENTE MESTIZO YUCATECO */
+.asistente-yucateco-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 4000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.avatar-yucateco {
+    width: 65px;
+    height: 65px;
+    background: #ffffff;
+    border: 3px solid var(--border-green);
+    border-radius: 50%;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+/* Sombrero vaquero/jipi de tejido yucateco hecho con puros bordes */
+.sombrero-jipi {
+    position: absolute;
+    top: -12px;
+    width: 55px;
+    height: 14px;
+    background: #f1ebd9;
+    border: 2px solid #6e4720;
+    border-radius: 20px;
+}
+.sombrero-jipi::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    width: 27px;
+    height: 12px;
+    background: #f1ebd9;
+    border: 2px solid #6e4720;
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.guayabera-face {
+    font-size: 2rem;
+    margin-top: 5px;
+}
+
+.avatar-yucateco:hover {
+    transform: scale(1.1) rotate(4deg);
+    border-color: var(--gold-text);
+}
+
+/* Bocadillo regional */
+.bocadillo-yucateco {
+    background: #fffdf5;
+    border: 3px solid var(--border-green);
+    border-radius: 16px;
+    padding: 1.2rem;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    margin-bottom: 1rem;
+    display: none;
+    animation: popIn 0.3s ease-out;
+}
+
+.bocadillo-yucateco h4 {
+    font-family: 'Cinzel', serif;
+    color: #391a13;
+    margin-bottom: 0.4rem;
+    border-bottom: 2px dashed var(--gold-muted);
+}
+
+.bocadillo-yucateco p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+footer { background-color: #24110c; color: rgba(243, 190, 78, 0.6); text-align: center; padding: 2.5rem 1rem; margin-top: auto; font-size: 0.85rem; font-family: 'Cinzel', serif; border-top: 4px solid var(--border-green); }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrimonio Gastronómico de Calcehtok</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header>
+        <h1>Patrimonio Gastronómico de Calcehtok</h1>
+        <p>Estudio Multidisciplinario sobre la Tradición de los Dulces de Yucatán</p>
+    </header>
+
+    <!-- 🗺️ MENÚ DE ATAJOS CON NUMERACIÓN DE PUNTOS Y BARRAS MAYAS -->
+    <main class="shortcuts-menu">
+        
+        <!-- ATAJO 1 -->
+        <a href="biologia.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num">  •  </div>
+                <div class="shortcut-title">Biología y Selección Natural</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
+        <!-- ATAJO 2 -->
+        <a href="cronograma.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num"> •• </div>
+                <div class="shortcut-title">Cronograma de Cosecha Agrícola</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
+        <!-- ATAJO 3 -->
+        <a href="infografia.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num"> ••• </div>
+                <div class="shortcut-title">Infografía: Evolución de la Palma</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
+        <!-- ATAJO 4 -->
+        <a href="sustentabilidad.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num">••••</div>
+                <div class="shortcut-title">Sustentabilidad y Recursos</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
+        <!-- ATAJO 5 -->
+        <a href="comunidad.html" class="shortcut-item">
+            <div class="shortcut-info">
+                <div class="shortcut-num">  —  </div>
+                <div class="shortcut-title">Saberes y Derechos Culturales</div>
+            </div>
+            <div class="shortcut-btn">Explorar Módulo</div>
+        </a>
+
+    </main>
+
+    <!-- 🤠 ASISTENTE VIRTUAL: EL MESTIZO YUCATECO -->
+    <div class="asistente-yucateco-container">
+        <div class="bocadillo-yucateco" id="bocadillo-yucateco">
+            <h4>¡Malas tardes, puruxón! 👋🤠</h4>
+            <p>¡Bomborota de proyecto te aventaste! Soy tu compadre de Calcehtok. Aquí abajo organicé todos tus puntos bien chulos con el sistema de numeración de nuestros ancestros mayas.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6e4720;"><em>¡Haz clic en un módulo para empezar a boxear el conocimiento!</em></p>
+        </div>
+        <div class="avatar-yucateco" onclick="toggleYucateco()">
+            <div class="sombrero-jipi"></div>
+            <div class="guayabera-face">👨🏻‍🌾</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Memoria de Investigación Interdisciplinaria - Calcehtok, Yucatán.</p>
+    </footer>
+
+    <script>
+        function toggleYucateco() {
+            var b = document.getElementById('bocadillo-yucateco');
+            b.style.display = b.style.display === "block" ? "none" : "block";
+        }
+        // Se abre automáticamente a los 2 segundos para llamar la atención
+        setTimeout(() => {
+            document.getElementById('bocadillo-yucateco').style.display = 'block';
+        }, 1500);
+    </script>
+</body>
+</html>
