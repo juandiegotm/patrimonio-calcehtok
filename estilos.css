@@ -346,3 +346,34 @@ tr:nth-child(even) { background-color: rgba(43, 76, 51, 0.05); }
 }
 
 footer { background-color: #24110c; color: rgba(243, 190, 78, 0.6); text-align: center; padding: 2.5rem 1rem; margin-top: auto; font-size: 0.85rem; font-family: 'Cinzel', serif; border-top: 4px solid var(--border-green); }
+/* --- ADAPTACIÓN PARA PANTALLAS DE CELULARES --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Hace que el menú y el contenido se pongan uno abajo del otro */
+        padding: 0 1rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Achica un poco el título para que no se corte en el cel */
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .sidebar {
+        min-width: auto;
+        margin-bottom: 1rem; /* Separa el menú del contenido de abajo */
+    }
+
+    .main-content {
+        padding: 1.5rem; /* Ajusta los espacios internos en pantallas chicas */
+    }
+
+    /* Hace que las tablas se puedan mover de lado a lado si no caben en la pantalla */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
